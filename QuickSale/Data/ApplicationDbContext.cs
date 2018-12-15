@@ -38,5 +38,9 @@ namespace QuickSale.Data
 
         public DbSet<Farmer> Farmers { get; set; }
 
+        public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<PaymentMethod> PaymentMethods { get; set; }
+
     }
 }
