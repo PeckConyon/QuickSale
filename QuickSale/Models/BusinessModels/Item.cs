@@ -10,6 +10,8 @@ namespace QuickSale.Models.BusinessModels
     {
         public int ItemId { get; set; }
 
+        public string ItemName { get; set; }
+
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
 
