@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using QuickSale.Models;
+using QuickSale.Models.BusinessModels;
 
 namespace QuickSale.Data
 {
@@ -22,5 +23,20 @@ namespace QuickSale.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Item> Items { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderItem> OrderItems { get; set; }
+
+        public DbSet<ItemAmount> ItemAmounts { get; set; }
+
+        public DbSet<UserSetting> UserSetting { get; set; }
+
+        public DbSet<Farmer> Farmers { get; set; }
+
     }
 }

@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using QuickSale.Models;
-using QuickSale.Models.ManageViewModels;
+using QuickSale.Models.ViewModels.ManageViewModels;
 using QuickSale.Services;
 
 namespace QuickSale.Controllers

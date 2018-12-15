@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace QuickSale.Models.AccountViewModels
+namespace QuickSale.Models.ViewModels.AccountViewModels
 {
     public class ExternalLoginViewModel
     {
