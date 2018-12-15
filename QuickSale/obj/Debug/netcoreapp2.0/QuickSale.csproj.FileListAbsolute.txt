@@ -10,3 +10,14 @@ C:\Users\Rika\source\repos\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale
 C:\Users\Rika\source\repos\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.AssemblyInfo.cs
 C:\Users\Rika\source\repos\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.dll
 C:\Users\Rika\source\repos\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.pdb
+D:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.csproj.CoreCompileInputs.cache
+D:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.AssemblyInfoInputs.cache
+D:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.AssemblyInfo.cs
+D:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.dll
+D:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.pdb
+D:\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.deps.json
+D:\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.runtimeconfig.json
+D:\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.runtimeconfig.dev.json
+D:\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.dll
+D:\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.pdb

@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using QuickSale.Models;
-using QuickSale.Models.AccountViewModels;
+using QuickSale.Models.ViewModels.AccountViewModels;
 using QuickSale.Services;
 
 namespace QuickSale.Controllers

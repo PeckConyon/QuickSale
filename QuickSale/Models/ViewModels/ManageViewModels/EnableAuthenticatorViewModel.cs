@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace QuickSale.Models.ManageViewModels
+namespace QuickSale.Models.ViewModels.ManageViewModels
 {
     public class EnableAuthenticatorViewModel
     {

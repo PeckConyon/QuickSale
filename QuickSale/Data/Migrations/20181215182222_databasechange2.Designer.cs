@@ -5,16 +5,16 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using Microsoft.EntityFrameworkCore.ValueGeneration;
 using QuickSale.Data;
 using System;
 
 namespace QuickSale.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181215182222_databasechange2")]
+    partial class databasechange2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,9 +139,6 @@ namespace QuickSale.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired();
-
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -181,8 +178,6 @@ namespace QuickSale.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("QuickSale.Models.BusinessModels.Category", b =>
@@ -279,16 +274,6 @@ namespace QuickSale.Data.Migrations
                     b.HasKey("UserSettingId");
 
                     b.ToTable("UserSetting");
-                });
-
-            modelBuilder.Entity("QuickSale.Models.BusinessModels.Farmer", b =>
-                {
-                    b.HasBaseType("QuickSale.Models.ApplicationUser");
-
-
-                    b.ToTable("Farmer");
-
-                    b.HasDiscriminator().HasValue("Farmer");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
