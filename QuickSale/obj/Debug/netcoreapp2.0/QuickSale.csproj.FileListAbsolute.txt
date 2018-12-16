@@ -33,3 +33,15 @@ E:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.AssemblyInfo.cs
 E:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.dll
 E:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.pdb
 E:\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.csprojResolveAssemblyReference.cache
+D:\REQUESTS\kfir\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.deps.json
+D:\REQUESTS\kfir\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.runtimeconfig.json
+D:\REQUESTS\kfir\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.runtimeconfig.dev.json
+D:\REQUESTS\kfir\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.dll
+D:\REQUESTS\kfir\QuickSale\QuickSale\bin\Debug\netcoreapp2.0\QuickSale.pdb
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.csprojAssemblyReference.cache
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.csproj.CoreCompileInputs.cache
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.AssemblyInfoInputs.cache
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.AssemblyInfo.cs
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.dll
+D:\REQUESTS\kfir\QuickSale\QuickSale\obj\Debug\netcoreapp2.0\QuickSale.pdb
