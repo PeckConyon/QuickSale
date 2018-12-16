@@ -9,11 +9,11 @@ using QuickSale.Models.ViewModels;
 
 namespace QuickSale.Controllers
 {
-    public class CustomerController : Controller
+    public class OrderController : Controller
     {
         public  ApplicationDbContext _db { get; set; }
 
-        public CustomerController(ApplicationDbContext db)
+        public OrderController(ApplicationDbContext db)
         {
             _db = db;
         }
@@ -24,10 +24,10 @@ namespace QuickSale.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            CustomerCategoryItemViewModel CustomerCategory = new CustomerCategoryItemViewModel();
+            OrderCategoryItemViewModel CustomerCategory = new OrderCategoryItemViewModel();
            
             List<CategoryItemViewModel> CategoryItemList = new List<CategoryItemViewModel>();
-
+            List<PaymentMethod> PaymentMethodList = _db.PaymentMethods.ToList();
             List<Category> CategoryList = _db.Categories.ToList();
 
             foreach (var item in CategoryList)
@@ -45,7 +45,7 @@ namespace QuickSale.Controllers
 
             CustomerCategory.Customer = new Customer();
             CustomerCategory.CategoryItemViewModel = CategoryItemList;
-
+            CustomerCategory.PaymentMethod = PaymentMethodList;
 
 
             return View(CustomerCategory);

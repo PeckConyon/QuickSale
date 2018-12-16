@@ -1,0 +1,95 @@
+﻿@model QuickSale.Models.ViewModels.OrderCategoryItemViewModel
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Customer</h4>
+<hr />
+<form action="Create">
+    <div class="row">
+        <div class="col-md-4">
+            
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Customer.CustomerName" class="control-label"></label>
+                    <input asp-for="Customer.CustomerName" class="form-control" />
+                    <span asp-validation-for="Customer.CustomerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Customer.CustomerEmail" class="control-label"></label>
+                    <input asp-for="Customer.CustomerEmail" class="form-control" />
+                    <span asp-validation-for="Customer.CustomerEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Customer.CusomerTelephoneNumber" class="control-label"></label>
+                    <input asp-for="Customer.CusomerTelephoneNumber" class="form-control" />
+                    <span asp-validation-for="Customer.CusomerTelephoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+        
+        </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </div>
+        <div class="row">
+            @foreach (var PaymentMethod in Model.PaymentMethod)
+            {
+
+                <div class="col-lg-3">
+
+                    <input type="radio" />
+                    <span class="text-danger"></span>
+
+                    @Html.DisplayFor(modelItem => PaymentMethod.PeymentMethod)
+
+
+                </div>
+            }
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            @foreach (var Categoryitem in Model.CategoryItemViewModel)
+            {
+                <div class="row">
+                    @Html.DisplayFor(modelItem => Categoryitem.Category.CategoryName)
+                </div>
+                <div class="row">
+                    @foreach (var item in Categoryitem.Items)
+                    {
+                        <div class="col-lg-3">
+                            @Html.DisplayFor(modelItem => item.ItemName)
+                            <div class="form-group">
+
+                                <input type="number" asp-for="Customer.CusomerTelephoneNumber" class="form-control" />
+                                <span asp-validation-for="Customer.CusomerTelephoneNumber" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+</form>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
