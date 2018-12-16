@@ -12,9 +12,10 @@ using System;
 namespace QuickSale.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181215211458_databasechange5")]
+    partial class databasechange5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -260,11 +261,7 @@ namespace QuickSale.Data.Migrations
 
                     b.Property<decimal>("NetTotal");
 
-                    b.Property<int>("PaymentMethodId");
-
                     b.HasKey("OrderId");
-
-                    b.HasIndex("PaymentMethodId");
 
                     b.ToTable("Orders");
                 });
@@ -383,14 +380,6 @@ namespace QuickSale.Data.Migrations
                     b.HasOne("QuickSale.Models.BusinessModels.Item", "Item")
                         .WithMany()
                         .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("QuickSale.Models.BusinessModels.Order", b =>
-                {
-                    b.HasOne("QuickSale.Models.BusinessModels.PaymentMethod", "PaymentMethod")
-                        .WithMany()
-                        .HasForeignKey("PaymentMethodId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

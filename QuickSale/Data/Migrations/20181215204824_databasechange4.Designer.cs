@@ -12,9 +12,10 @@ using System;
 namespace QuickSale.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181215204824_databasechange4")]
+    partial class databasechange4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -212,7 +213,7 @@ namespace QuickSale.Data.Migrations
 
                     b.HasKey("CustomerId");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("QuickSale.Models.BusinessModels.Item", b =>
@@ -260,11 +261,7 @@ namespace QuickSale.Data.Migrations
 
                     b.Property<decimal>("NetTotal");
 
-                    b.Property<int>("PaymentMethodId");
-
                     b.HasKey("OrderId");
-
-                    b.HasIndex("PaymentMethodId");
 
                     b.ToTable("Orders");
                 });
@@ -287,18 +284,6 @@ namespace QuickSale.Data.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("OrderItems");
-                });
-
-            modelBuilder.Entity("QuickSale.Models.BusinessModels.PaymentMethod", b =>
-                {
-                    b.Property<int>("PaymentMethodId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("PeymentMethod");
-
-                    b.HasKey("PaymentMethodId");
-
-                    b.ToTable("PaymentMethods");
                 });
 
             modelBuilder.Entity("QuickSale.Models.BusinessModels.UserSetting", b =>
@@ -383,14 +368,6 @@ namespace QuickSale.Data.Migrations
                     b.HasOne("QuickSale.Models.BusinessModels.Item", "Item")
                         .WithMany()
                         .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("QuickSale.Models.BusinessModels.Order", b =>
-                {
-                    b.HasOne("QuickSale.Models.BusinessModels.PaymentMethod", "PaymentMethod")
-                        .WithMany()
-                        .HasForeignKey("PaymentMethodId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
